@@ -22,5 +22,4 @@ int main() {
 
     cout << "Nilai X terakhir = " << x << endl;
     cout << "Jumlah Perulangan = " << perulanganWhile << endl;
-    cout << "masukkan panjang = " << endl;
 }

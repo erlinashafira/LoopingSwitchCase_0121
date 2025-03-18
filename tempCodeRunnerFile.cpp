@@ -1,25 +1,46 @@
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
 using namespace std;
 
-int main() {
-    //Perulangan While
-    int x;
-    int perulanganWhile = 0;
-    int perulanganDo = 0;
-
-    srand(time(0));
-    x = rand() %10;
-    cout << "Perulangan While " << endl;
-    cout << "Nilai X awal = "<< x << endl;
-
-    while(x < 7){
-        cout << "Nilai x = "<< x << "Lari Keliling " << endl;
-        x = rand() % 10;
-        perulanganWhile++;
-    }
-
-    cout << "Nilai X terakhir = " << x << endl;
-    cout << "Jumlah Perulangan = " << perulanganWhile << endl;
+float luasPersegiPanjang(float x, float y){
+    return x * y;
 }
+
+float luasLingkaran(float x){
+    return 3.14 * x * x;
+}
+
+    int main (){
+        int pilihan;
+        float panjang,lebar,jejari;
+        do{
+            cout << "===Menu===" << endl;
+            cout << "1. Menghtung Luas Persegi Panjang" << endl;
+            cout << "2. Menghitung Luaas Lingkaran" << endl;
+            cout << "3. Exit" << endl;
+            cout << "pilih (1/2/3) : ";
+            cin >> pilihan;
+
+            switch(pilihan){
+                case 1 :
+                    cout << "Menghitung Luas Persegi Panjang" << endl;
+                    cout << "Masukkan Panjang : ";
+                    cin >> panjang;
+                    cout << "Masukkan Lebar :";
+                    cin >> lebar;
+                    cout << "Luas Persegi Panjang"
+                    << luasPersegiPanjang(panjang,lebar) << endl;
+                    break;
+                case 2 :
+                    cout << "Menghitung Luas Lingkaran " << endl;
+                    cout << "Masukkan Jari - Jari = ";
+                    cin >> jejari;
+                    cout << "Luas Lingkaran = "
+                    << luasLingkaran(jejari) << endl;
+                    break;
+                case 3 :
+                    break;
+                default :
+                cout << "Pilihan anda salah" << endl;
+                break;
+            }
+    }

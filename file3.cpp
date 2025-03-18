@@ -43,5 +43,4 @@ float luasLingkaran(float x){
                 cout << "Pilihan anda salah" << endl;
                 break;
             }
-        }while(pilihan != 3);
     }
